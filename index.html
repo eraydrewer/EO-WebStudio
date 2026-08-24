@@ -12,19 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --ink:#121212;
-      --muted:#686868;
-      --paper:#f4f2ed;
-      --white:#fff;
-      --line:#d8d5cf;
-      --blue:#3157ff;
-      --blue-dark:#2444dc;
-      --soft-blue:#e9edff;
-      --danger:#c52d2d;
-      --max:1240px;
-    }
-
+    :root{--ink:#121212;--muted:#686868;--paper:#f4f2ed;--white:#fff;--line:#d8d5cf;--blue:#3157ff;--blue-dark:#2444dc;--soft-blue:#e9edff;--danger:#c52d2d;--max:1240px}
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{background:var(--paper);color:var(--ink);font-family:"Manrope",sans-serif;-webkit-font-smoothing:antialiased}
@@ -35,125 +23,44 @@
 
     .header{position:fixed;inset:0 0 auto;z-index:1000;background:rgba(244,242,237,.94);border-bottom:1px solid rgba(18,18,18,.12);backdrop-filter:blur(14px)}
     .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-    .brand{display:flex;align-items:center}
-    .brand-logo{display:block;width:245px;height:auto;max-height:52px}
-    .nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600}
-    .nav-links a:not(.nav-cta){position:relative;padding:8px 0}
-    .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--ink);transition:right .22s}
-    .nav-links a:hover::after{right:0}
-    .nav-cta{padding:12px 18px;background:var(--ink);color:#fff;border:1px solid var(--ink);transition:.2s}
-    .nav-cta:hover{background:var(--blue);border-color:var(--blue)}
+    .brand{display:flex;align-items:center}.brand-logo{display:block;width:245px;height:auto;max-height:52px}
+    .nav-links{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:600}
+    .nav-links a:not(.nav-cta){position:relative;padding:8px 0}.nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--ink);transition:right .22s}.nav-links a:hover::after{right:0}
+    .nav-cta{padding:12px 18px;background:var(--ink);color:#fff;border:1px solid var(--ink);transition:.2s}.nav-cta:hover{background:var(--blue);border-color:var(--blue)}
     .menu-btn{display:none;width:42px;height:42px;border:1px solid var(--line);background:transparent;cursor:pointer;align-items:center;justify-content:center}
-    .menu-btn span,.menu-btn span::before,.menu-btn span::after{width:18px;height:1.5px;background:var(--ink);display:block;position:relative}
-    .menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
-    .menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+    .menu-btn span,.menu-btn span::before,.menu-btn span::after{width:18px;height:1.5px;background:var(--ink);display:block;position:relative}.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
 
     .hero{min-height:100vh;padding:150px 0 80px;display:flex;align-items:center;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
     .hero::after{content:"EO";position:absolute;right:-30px;bottom:-105px;color:rgba(18,18,18,.035);font-size:clamp(240px,36vw,560px);font-weight:800;line-height:.72;letter-spacing:-.09em;pointer-events:none}
     .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:80px;align-items:end}
-    .hero-kicker{display:flex;align-items:center;gap:12px;margin-bottom:28px}
-    .hero-kicker::before{content:"";width:34px;height:1px;background:var(--blue)}
-    .hero h1{max-width:900px;font-size:clamp(58px,8.6vw,126px);line-height:.9;letter-spacing:-.07em;font-weight:700}
-    .hero h1 span{color:var(--blue)}
-    .hero-side{padding-bottom:7px}.hero-side p{color:#4f4f4f;font-size:18px;line-height:1.7;margin-bottom:30px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{min-height:52px;padding:0 22px;display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid var(--ink);font-size:14px;font-weight:700;transition:.2s}
-    .btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-2px)}
-    .btn-light:hover{background:#fff;transform:translateY(-2px)}
-    .btn-white{background:#fff;color:var(--ink);border-color:#fff}.btn-white:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
-    .arrow{font-family:"IBM Plex Mono",monospace;font-size:17px}
+    .hero-kicker{display:flex;align-items:center;gap:12px;margin-bottom:28px}.hero-kicker::before{content:"";width:34px;height:1px;background:var(--blue)}
+    .hero h1{max-width:900px;font-size:clamp(58px,8.6vw,126px);line-height:.9;letter-spacing:-.07em;font-weight:700}.hero h1 span{color:var(--blue)}
+    .hero-side{padding-bottom:7px}.hero-side p{color:#4f4f4f;font-size:18px;line-height:1.7;margin-bottom:30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{min-height:52px;padding:0 22px;display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid var(--ink);font-size:14px;font-weight:700;transition:.2s}.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-2px)}.arrow{font-family:"IBM Plex Mono",monospace;font-size:17px}
 
-    .ticker{background:var(--ink);color:#fff;overflow:hidden}
-    .ticker-track{width:max-content;display:flex;animation:ticker 28s linear infinite}
-    .ticker-item{padding:15px 30px;white-space:nowrap;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
-    .ticker-item::after{content:"✦";color:#7790ff;margin-left:38px}
-    @keyframes ticker{to{transform:translateX(-50%)}}
+    .ticker{background:var(--ink);color:#fff;overflow:hidden}.ticker-track{width:max-content;display:flex;animation:ticker 28s linear infinite}.ticker-item{padding:15px 30px;white-space:nowrap;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}.ticker-item::after{content:"✦";color:#7790ff;margin-left:38px}@keyframes ticker{to{transform:translateX(-50%)}}
 
-    .section{padding:110px 0;border-bottom:1px solid var(--line)}
-    .section-white{background:#fff}
-    .section-head{display:grid;grid-template-columns:260px minmax(0,1fr);gap:60px;align-items:start;margin-bottom:64px}
-    .section-head h2{max-width:850px;font-size:clamp(42px,6vw,78px);line-height:1;letter-spacing:-.055em;font-weight:650}
-    .section-head p{max-width:720px;color:var(--muted);font-size:17px;line-height:1.7;margin-top:22px}
-
-    /* 7-SCHRITTE ANFRAGE */
-    .quote-section{padding:105px 0 120px;background:#fff;border-bottom:1px solid var(--line)}
-    .quote-intro{text-align:center;max-width:840px;margin:0 auto 46px}
-    .quote-intro .mono{color:var(--blue);display:block;margin-bottom:16px}
-    .quote-intro h2{font-size:clamp(42px,5.5vw,72px);line-height:.98;letter-spacing:-.055em;font-weight:700;margin-bottom:20px}
-    .quote-intro h2 span{color:var(--blue)}
-    .quote-intro p{color:var(--muted);font-size:17px;line-height:1.7;max-width:720px;margin:auto}
-    .quote-arrow{width:44px;height:44px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;margin:26px auto 0;font-size:20px;color:var(--blue)}
-
+    .quote-section{padding:105px 0 120px;background:#fff}
+    .quote-intro{text-align:center;max-width:840px;margin:0 auto 46px}.quote-intro .mono{color:var(--blue);display:block;margin-bottom:16px}.quote-intro h2{font-size:clamp(42px,5.5vw,72px);line-height:.98;letter-spacing:-.055em;font-weight:700;margin-bottom:20px}.quote-intro h2 span{color:var(--blue)}.quote-intro p{color:var(--muted);font-size:17px;line-height:1.7;max-width:720px;margin:auto}.quote-arrow{width:44px;height:44px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;margin:26px auto 0;font-size:20px;color:var(--blue)}
     .quote-card{width:min(800px,100%);margin:0 auto;background:#fff;border:1px solid #cfcfcf;box-shadow:0 18px 45px rgba(18,18,18,.10);padding:42px 34px 34px}
-    .step-badge{width:max-content;margin:0 auto 16px;padding:7px 16px;background:var(--soft-blue);color:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600}
-    .progress-track{height:10px;background:#e3e3e3;overflow:hidden;margin-bottom:22px}
-    .progress-bar{height:100%;width:14.285%;background:var(--blue);transition:width .3s ease}
-    .step{display:none}.step.active{display:block}
-    .step-question{font-size:16px;font-weight:800;margin-bottom:16px}
-    .required{color:var(--danger)}
-    .option-list{display:grid;gap:9px}
-    .option{width:100%;min-height:48px;border:1px solid #c8c8c8;background:#fff;color:var(--ink);padding:12px 15px;display:flex;align-items:center;gap:12px;text-align:left;cursor:pointer;transition:.16s ease;font-weight:500}
-    .option:hover{border-color:var(--ink);background:#fafafa}
-    .option.selected{border:2px solid var(--ink);padding:11px 14px;background:#f8f8f8}
-    .option-icon{font-family:"IBM Plex Mono",monospace;color:var(--blue);font-weight:700;width:20px;flex:0 0 20px}
-    .form-error{display:none;color:var(--danger);font-size:13px;font-weight:600;margin-top:12px}.form-error.show{display:block}
-    .step-actions{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-top:24px}
-    .step-actions.first{grid-template-columns:1fr}
-    .quote-btn{min-height:48px;border:1px solid var(--ink);padding:0 20px;font-weight:800;cursor:pointer;transition:.18s ease}
-    .quote-btn.back{background:#f4f2ed;color:var(--ink);border-color:#e5e2dc}
-    .quote-btn.next,.quote-btn.submit{background:var(--blue);border-color:var(--blue);color:#fff}
-    .quote-btn.next:hover,.quote-btn.submit:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
-
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
-    .contact-grid input,.contact-grid textarea{width:100%;border:1px solid #c8c8c8;background:#fff;padding:13px 14px;outline:none;font-size:14px}
-    .contact-grid input:focus,.contact-grid textarea:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(49,87,255,.08)}
-    .contact-grid textarea{grid-column:1/-1;min-height:115px;resize:vertical}
-    .consent{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:13px;line-height:1.55;color:#444}
-    .consent input{margin-top:3px;accent-color:var(--blue)}
-    .quote-success{display:none;text-align:center;padding:32px 12px 12px}.quote-success.show{display:block}
-    .quote-success-mark{width:58px;height:58px;border-radius:50%;background:var(--soft-blue);color:var(--blue);display:grid;place-items:center;margin:0 auto 18px;font-size:26px;font-weight:800}
-    .quote-success h3{font-size:28px;margin-bottom:10px}.quote-success p{color:var(--muted);line-height:1.7}
-
-    .work-card{background:var(--ink);color:#fff;display:grid;grid-template-columns:.9fr 1.1fr;min-height:560px;overflow:hidden}
-    .work-info{padding:54px;display:flex;flex-direction:column;justify-content:space-between}
-    .work-label{color:#8da2ff}.work-info h3{font-size:clamp(42px,5vw,70px);line-height:.98;letter-spacing:-.055em;margin:20px 0 24px}
-    .work-info p{color:#b9b9b9;line-height:1.75;max-width:480px}.work-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}.work-tags span{padding:8px 11px;border:1px solid #404040;font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase}
-    .work-preview{margin:28px 28px 28px 0;background:#f3f3f0;color:var(--ink);display:flex;flex-direction:column;min-width:0;box-shadow:0 30px 70px rgba(0,0,0,.28)}
-    .fake-browser{height:45px;border-bottom:1px solid #d7d7d2;display:flex;align-items:center;gap:6px;padding:0 15px}.fake-browser i{width:8px;height:8px;border-radius:50%;background:#c7c7c2}
-    .mock-hero{flex:1;background:#071c4a;color:#fff;padding:48px;display:grid;grid-template-columns:1fr .72fr;gap:25px;align-items:center}.mock-logo{width:58px;height:58px;border-radius:50%;background:#ffd800;margin-bottom:28px}.mock-title{font-size:clamp(34px,4vw,62px);font-weight:800;line-height:.96;max-width:430px}.mock-title span{color:#ffd800}.mock-panel{min-height:260px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;font-family:"IBM Plex Mono",monospace;color:#ffd800;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
-
-    .process{border-top:1px solid var(--ink)}.process-row{display:grid;grid-template-columns:120px 1fr 1fr;gap:40px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start}.process-row h3{font-size:22px;letter-spacing:-.03em}.process-row p{color:var(--muted);line-height:1.7;font-size:15px}
-    .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.principle{min-height:310px;background:var(--paper);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;justify-content:space-between;transition:.22s}.principle:hover{transform:translateY(-5px);border-color:var(--ink)}.principle-symbol{width:45px;height:45px;display:grid;place-items:center;border:1px solid var(--ink);font-family:"IBM Plex Mono",monospace;color:var(--blue)}.principle h3{font-size:24px;letter-spacing:-.035em;margin-bottom:10px}.principle p{color:var(--muted);line-height:1.65;font-size:14px}
-
-    .contact{background:var(--blue);color:#fff;padding:110px 0 90px}.contact-top{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end;padding-bottom:70px;border-bottom:1px solid rgba(255,255,255,.28)}.contact h2{font-size:clamp(56px,8vw,112px);line-height:.9;letter-spacing:-.07em;font-weight:650;max-width:900px}.contact-side p{font-size:17px;line-height:1.7;color:rgba(255,255,255,.8);margin-bottom:26px}.contact-note{margin-top:30px;color:rgba(255,255,255,.72);line-height:1.7;font-size:14px}
-    .footer{background:var(--blue);color:#fff;padding:28px 0 35px}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:25px;font-size:13px;color:rgba(255,255,255,.75)}.footer-brand{color:#fff;font-weight:800;font-size:16px}
+    .step-badge{width:max-content;margin:0 auto 16px;padding:7px 16px;background:var(--soft-blue);font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600}.progress-track{height:10px;background:#e3e3e3;overflow:hidden;margin-bottom:22px}.progress-bar{height:100%;width:14.285%;background:var(--blue);transition:width .3s ease}.step{display:none}.step.active{display:block}.step-question{font-size:16px;font-weight:800;margin-bottom:16px}.required{color:var(--danger)}
+    .option-list{display:grid;gap:9px}.option{width:100%;min-height:48px;border:1px solid #c8c8c8;background:#fff;color:var(--ink);padding:12px 15px;display:flex;align-items:center;gap:12px;text-align:left;cursor:pointer;transition:.16s ease;font-weight:500}.option:hover{border-color:var(--ink);background:#fafafa}.option.selected{border:2px solid var(--ink);padding:11px 14px;background:#f8f8f8}.option-icon{font-family:"IBM Plex Mono",monospace;color:var(--blue);font-weight:700;width:20px;flex:0 0 20px}
+    .form-error{display:none;color:var(--danger);font-size:13px;font-weight:600;margin-top:12px}.form-error.show{display:block}.step-actions{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-top:24px}.step-actions.first{grid-template-columns:1fr}.quote-btn{min-height:48px;border:1px solid var(--ink);padding:0 20px;font-weight:800;cursor:pointer;transition:.18s}.quote-btn.back{background:#f4f2ed;color:var(--ink);border-color:#e5e2dc}.quote-btn.next,.quote-btn.submit{background:var(--blue);border-color:var(--blue);color:#fff}.quote-btn.next:hover,.quote-btn.submit:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}.contact-grid input,.contact-grid textarea{width:100%;border:1px solid #c8c8c8;background:#fff;padding:13px 14px;outline:none;font-size:14px}.contact-grid input:focus,.contact-grid textarea:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(49,87,255,.08)}.contact-grid textarea{grid-column:1/-1;min-height:115px;resize:vertical}.consent{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:13px;line-height:1.55;color:#444}.consent input{margin-top:3px;accent-color:var(--blue)}
+    .quote-success{display:none;text-align:center;padding:32px 12px 12px}.quote-success.show{display:block}.quote-success-mark{width:58px;height:58px;border-radius:50%;background:var(--soft-blue);color:var(--blue);display:grid;place-items:center;margin:0 auto 18px;font-size:26px;font-weight:800}.quote-success h3{font-size:28px;margin-bottom:10px}.quote-success p{color:var(--muted);line-height:1.7}
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
 
-    @media(max-width:980px){
-      .wrap{width:min(var(--max),calc(100% - 36px))}.menu-btn{display:flex}
-      .nav-links{position:absolute;top:78px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:22px 18px 26px;display:none;flex-direction:column;align-items:stretch;gap:4px}.nav-links.open{display:flex}.nav-links a{padding:14px 6px!important}.nav-cta{margin-top:8px;text-align:center}
-      .hero-grid,.section-head,.work-card,.contact-top{grid-template-columns:1fr}.hero-grid{gap:45px}.section-head{gap:24px}.work-preview{margin:0 28px 28px;min-height:470px}.principles{grid-template-columns:1fr}.principle{min-height:230px}
-    }
-
-    @media(max-width:720px){
-      .nav{height:70px}.nav-links{top:70px}.brand-logo{width:190px;max-height:42px}.hero{min-height:auto;padding:125px 0 72px}.hero h1{font-size:clamp(54px,17vw,82px)}.hero-side p{font-size:16px}
-      .section{padding:78px 0}.section-head{margin-bottom:44px}.quote-section{padding:75px 0 85px}.quote-card{padding:28px 18px 22px;box-shadow:0 12px 30px rgba(18,18,18,.10)}.quote-intro{margin-bottom:34px}.quote-intro p{font-size:15px}.step-actions{grid-template-columns:92px 1fr}.step-actions.first{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.contact-grid textarea{grid-column:auto}.option{font-size:14px}
-      .work-info{padding:34px 26px 40px}.work-preview{margin:0 18px 18px;min-height:390px}.mock-hero{padding:28px;grid-template-columns:1fr}.mock-panel{min-height:135px}.process-row{grid-template-columns:62px 1fr;gap:14px 22px}.process-row p{grid-column:2}.contact{padding:82px 0 68px}.contact-top{padding-bottom:52px}.footer-row{flex-direction:column;align-items:flex-start}
-    }
-
+    @media(max-width:980px){.wrap{width:min(var(--max),calc(100% - 36px))}.menu-btn{display:flex}.nav-links{position:absolute;top:78px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:22px 18px 26px;display:none;flex-direction:column;align-items:stretch;gap:4px}.nav-links.open{display:flex}.nav-links a{padding:14px 6px!important}.nav-cta{margin-top:8px;text-align:center}.hero-grid{grid-template-columns:1fr;gap:45px}}
+    @media(max-width:720px){.nav{height:70px}.nav-links{top:70px}.brand-logo{width:190px;max-height:42px}.hero{min-height:auto;padding:125px 0 72px}.hero h1{font-size:clamp(54px,17vw,82px)}.hero-side p{font-size:16px}.quote-section{padding:75px 0 85px}.quote-card{padding:28px 18px 22px;box-shadow:0 12px 30px rgba(18,18,18,.10)}.quote-intro{margin-bottom:34px}.quote-intro p{font-size:15px}.step-actions{grid-template-columns:92px 1fr}.step-actions.first{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.contact-grid textarea{grid-column:auto}.option{font-size:14px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}.reveal{opacity:1;transform:none;transition:none}}
   </style>
 </head>
-
 <body>
 <header class="header">
   <div class="wrap nav">
     <a href="#start" class="brand" aria-label="EO WebStudio Startseite"><img src="eo-webstudio-logo.svg" alt="EO WebStudio" class="brand-logo"></a>
     <nav class="nav-links" id="navLinks">
       <a href="#leistungen">Anfrage</a>
-      <a href="#projekt">Projekt</a>
-      <a href="#ablauf">Ablauf</a>
-      <a href="#warum">Warum EO</a>
       <a href="#leistungen" class="nav-cta">Projekt anfragen</a>
     </nav>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span></button>
@@ -163,26 +70,12 @@
 <main>
   <section class="hero" id="start">
     <div class="wrap hero-grid">
-      <div>
-        <div class="hero-kicker mono">Webdesign & Entwicklung</div>
-        <h1>Websites, die <span>passen.</span> Nicht von der Stange.</h1>
-      </div>
-      <div class="hero-side">
-        <p>EO WebStudio entwickelt individuelle Websites für Unternehmen, Vereine, Gastronomie, Selbstständige und besondere digitale Projekte – modern, klar und passend zum echten Auftritt der Marke.</p>
-        <div class="hero-actions">
-          <a href="#leistungen" class="btn btn-dark">Projekt anfragen <span class="arrow">↗</span></a>
-          <a href="#projekt" class="btn btn-light">Arbeit ansehen</a>
-        </div>
-      </div>
+      <div><div class="hero-kicker mono">Webdesign & Entwicklung</div><h1>Websites, die <span>passen.</span> Nicht von der Stange.</h1></div>
+      <div class="hero-side"><p>EO WebStudio entwickelt individuelle Websites für Unternehmen, Vereine, Gastronomie, Selbstständige und besondere digitale Projekte – modern, klar und passend zum echten Auftritt der Marke.</p><div class="hero-actions"><a href="#leistungen" class="btn btn-dark">Projekt anfragen <span class="arrow">↗</span></a></div></div>
     </div>
   </section>
 
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span class="ticker-item">Unternehmenswebsites</span><span class="ticker-item">Vereinsseiten</span><span class="ticker-item">Gastronomie</span><span class="ticker-item">Landingpages</span><span class="ticker-item">Portfolios</span><span class="ticker-item">Web-Anwendungen</span>
-      <span class="ticker-item">Unternehmenswebsites</span><span class="ticker-item">Vereinsseiten</span><span class="ticker-item">Gastronomie</span><span class="ticker-item">Landingpages</span><span class="ticker-item">Portfolios</span><span class="ticker-item">Web-Anwendungen</span>
-    </div>
-  </div>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track"><span class="ticker-item">Unternehmenswebsites</span><span class="ticker-item">Vereinsseiten</span><span class="ticker-item">Gastronomie</span><span class="ticker-item">Landingpages</span><span class="ticker-item">Portfolios</span><span class="ticker-item">Web-Anwendungen</span><span class="ticker-item">Unternehmenswebsites</span><span class="ticker-item">Vereinsseiten</span><span class="ticker-item">Gastronomie</span><span class="ticker-item">Landingpages</span><span class="ticker-item">Portfolios</span><span class="ticker-item">Web-Anwendungen</span></div></div>
 
   <section class="quote-section" id="leistungen">
     <div class="wrap">
@@ -300,47 +193,7 @@
       </div>
     </div>
   </section>
-
-  <section class="section" id="projekt">
-    <div class="wrap">
-      <div class="section-head reveal"><div class="mono">02 / Ausgewählte Arbeit</div><div><h2>Ein Projekt, das zeigt, wie individuell eine Website werden kann.</h2></div></div>
-      <article class="work-card reveal">
-        <div class="work-info"><div><div class="work-label mono">Vereinswebsite / 2026</div><h3>Fenerbahçe Marl</h3><p>Ein kompletter Vereinsauftritt mit Mannschafts- und Jugendbereichen, News, Sponsoren, Vorstand, Kontakt, Spielplänen und eigenen Verwaltungsfunktionen.</p><div class="work-tags"><span>Responsive</span><span>News-System</span><span>Fussball.de</span><span>Admin-Bereich</span></div></div><div class="mono">Konzept · Design · Entwicklung</div></div>
-        <div class="work-preview"><div class="fake-browser"><i></i><i></i><i></i></div><div class="mock-hero"><div><div class="mock-logo"></div><div class="mock-title">Fenerbahçe <span>Marl</span></div></div><div class="mock-panel">Verein · Mannschaften · News</div></div></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section section-white" id="ablauf">
-    <div class="wrap">
-      <div class="section-head reveal"><div class="mono">03 / Ablauf</div><div><h2>Ein klarer Prozess, ohne unnötig kompliziert zu werden.</h2></div></div>
-      <div class="process reveal">
-        <div class="process-row"><div class="mono">01</div><h3>Idee & Anforderungen</h3><p>Wir klären, was die Website erreichen soll, welche Inhalte gebraucht werden und welche Funktionen wirklich sinnvoll sind.</p></div>
-        <div class="process-row"><div class="mono">02</div><h3>Designrichtung</h3><p>Farbe, Schrift, Aufbau und Stil werden auf das Unternehmen oder Projekt abgestimmt – nicht auf ein fertiges Template.</p></div>
-        <div class="process-row"><div class="mono">03</div><h3>Entwicklung</h3><p>Die Seite wird responsive umgesetzt und so aufgebaut, dass sie auf Smartphone, Tablet und Desktop zuverlässig funktioniert.</p></div>
-        <div class="process-row"><div class="mono">04</div><h3>Feinschliff</h3><p>Texte, Abstände, Bilder und Funktionen werden gemeinsam geprüft und angepasst, bis der Auftritt wirklich stimmig ist.</p></div>
-        <div class="process-row"><div class="mono">05</div><h3>Veröffentlichung</h3><p>Nach dem finalen Check wird die Website veröffentlicht und kann anschließend weiter ausgebaut oder gepflegt werden.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="warum">
-    <div class="wrap">
-      <div class="section-head reveal"><div class="mono">04 / Warum EO</div><div><h2>Keine Agentur-Floskeln. Einfach eine Website, die ihren Zweck erfüllt.</h2></div></div>
-      <div class="principles reveal">
-        <article class="principle"><div class="principle-symbol">01</div><div><h3>Individuell statt Baukasten</h3><p>Das Design richtet sich nach dem Projekt. Nicht umgekehrt.</p></div></article>
-        <article class="principle"><div class="principle-symbol">02</div><div><h3>Direkte Abstimmung</h3><p>Kurze Wege, schnelle Änderungen und klare Kommunikation während der Umsetzung.</p></div></article>
-        <article class="principle"><div class="principle-symbol">03</div><div><h3>Mehr als nur Optik</h3><p>Auch besondere Funktionen, interne Bereiche und individuelle Web-Tools können umgesetzt werden.</p></div></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="kontakt">
-    <div class="wrap"><div class="contact-top reveal"><h2>Du hast eine Idee? Machen wir etwas daraus.</h2><div class="contact-side"><p>Nutze oben die Projektanfrage oder melde dich direkt. Ob neue Website, Redesign oder individuelle Funktion – wir können das Projekt gemeinsam aufbauen.</p><a href="#leistungen" class="btn btn-white">Projektanfrage starten <span class="arrow">↗</span></a><p class="contact-note">Deine direkte E-Mail-Adresse oder WhatsApp-Nummer können wir hier zusätzlich einbauen.</p></div></div></div>
-  </section>
 </main>
-
-<footer class="footer"><div class="wrap footer-row"><div class="footer-brand">EO WebStudio</div><div>Webdesign & Entwicklung</div><div>© <span id="year"></span> EO WebStudio</div></div></footer>
 
 <script>
   const menuBtn=document.getElementById('menuBtn');
@@ -350,7 +203,6 @@
 
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-  document.getElementById('year').textContent=new Date().getFullYear();
 
   const quoteData={};
   const steps=[...document.querySelectorAll('.step')];
@@ -358,58 +210,21 @@
   const bar=document.getElementById('progressBar');
   let currentStep=1;
 
-  function showStep(number){
-    currentStep=number;
-    steps.forEach(step=>step.classList.toggle('active',Number(step.dataset.step)===number));
-    badge.textContent=`Schritt ${number} von 7`;
-    bar.style.width=`${(number/7)*100}%`;
-    document.getElementById('quoteCard').scrollIntoView({behavior:'smooth',block:'center'});
-  }
+  function showStep(number){currentStep=number;steps.forEach(step=>step.classList.toggle('active',Number(step.dataset.step)===number));badge.textContent=`Schritt ${number} von 7`;bar.style.width=`${(number/7)*100}%`;document.getElementById('quoteCard').scrollIntoView({behavior:'smooth',block:'center'});}
 
-  document.querySelectorAll('.option').forEach(option=>{
-    option.addEventListener('click',()=>{
-      const step=option.closest('.step');
-      step.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));
-      option.classList.add('selected');
-      quoteData[step.dataset.key]=option.dataset.value;
-      const error=step.querySelector('.form-error');
-      if(error) error.classList.remove('show');
-    });
-  });
+  document.querySelectorAll('.option').forEach(option=>{option.addEventListener('click',()=>{const step=option.closest('.step');step.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));option.classList.add('selected');quoteData[step.dataset.key]=option.dataset.value;const error=step.querySelector('.form-error');if(error)error.classList.remove('show');});});
 
-  document.querySelectorAll('.quote-btn.next').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const step=btn.closest('.step');
-      const key=step.dataset.key;
-      if(!quoteData[key]){
-        step.querySelector('.form-error').classList.add('show');
-        return;
-      }
-      if(currentStep<7) showStep(currentStep+1);
-    });
-  });
-
-  document.querySelectorAll('.quote-btn.back').forEach(btn=>btn.addEventListener('click',()=>{if(currentStep>1) showStep(currentStep-1)}));
+  document.querySelectorAll('.quote-btn.next').forEach(btn=>{btn.addEventListener('click',()=>{const step=btn.closest('.step');const key=step.dataset.key;if(!quoteData[key]){step.querySelector('.form-error').classList.add('show');return;}if(currentStep<7)showStep(currentStep+1);});});
+  document.querySelectorAll('.quote-btn.back').forEach(btn=>btn.addEventListener('click',()=>{if(currentStep>1)showStep(currentStep-1)}));
 
   document.getElementById('quoteSubmit').addEventListener('click',()=>{
     const name=document.getElementById('qName').value.trim();
     const email=document.getElementById('qEmail').value.trim();
     const consent=document.getElementById('qConsent').checked;
     const error=document.getElementById('contactError');
-
-    if(!name || !email || !consent){error.classList.add('show');return;}
+    if(!name||!email||!consent){error.classList.add('show');return;}
     error.classList.remove('show');
-
-    quoteData.contact={
-      name,
-      email,
-      phone:document.getElementById('qPhone').value.trim(),
-      company:document.getElementById('qCompany').value.trim(),
-      website:document.getElementById('qWebsite').value.trim(),
-      role:document.getElementById('qRole').value.trim(),
-      message:document.getElementById('qMessage').value.trim()
-    };
-
+    quoteData.contact={name,email,phone:document.getElementById('qPhone').value.trim(),company:document.getElementById('qCompany').value.trim(),website:document.getElementById('qWebsite').value.trim(),role:document.getElementById('qRole').value.trim(),message:document.getElementById('qMessage').value.trim()};
     console.log('EO WebStudio Projektanfrage',quoteData);
     document.getElementById('quoteFormArea').style.display='none';
     document.getElementById('quoteSuccess').classList.add('show');
