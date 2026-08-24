@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 150" role="img" aria-labelledby="title desc">
+  <title id="title">EO WebStudio</title>
+  <desc id="desc">EO WebStudio Logo</desc>
+  <g fill="#121212">
+    <path d="M12 24h128v28H12z"/>
+    <path d="M12 98h128v28H12z"/>
+    <path d="M12 61h42v28H12z"/>
+    <path fill-rule="evenodd" d="M182 18a57 57 0 1 1 0 114 57 57 0 0 1 0-114zm0 29a28 28 0 1 0 0 56 28 28 0 0 0 0-56z"/>
+  </g>
+  <rect x="64" y="61" width="26" height="28" fill="#3157ff"/>
+  <rect x="102" y="61" width="64" height="28" fill="#3157ff"/>
+  <rect x="156" y="61" width="35" height="28" fill="#3157ff"/>
+  <text x="270" y="101" fill="#121212" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="68" font-weight="500" letter-spacing="-3">WebStudio</text>
+</svg>
